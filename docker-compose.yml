@@ -21,7 +21,6 @@ services:
       - db_data:/var/lib/postgresql/data
     restart: always
 
-  #drush si standard --db-url=pgsql://postgres:example@postgres/postgres
   drush:
     image: drush/drush:8-alpine
     working_dir: "/var/www/html"
