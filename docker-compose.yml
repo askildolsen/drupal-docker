@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  drupal:
+    build: .
+    ports:
+      - 8888:80
+    volumes:
+      - drupal_private:/var/www/private
+      - drupal_sites:/var/www/html/sites
+      - drupal:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./settings.local.php:/var/www/html/sites/default/settings.local.php
+    restart: always
+
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+
+  #drush si standard --db-url=pgsql://postgres:example@postgres/postgres
+  drush:
+    image: drush/drush:8-alpine
+    working_dir: "/var/www/html"
+    volumes:
+      - drupal_private:/var/www/private
+      - drupal_sites:/var/www/html/sites
+      - drupal:/var/www/html
+
+volumes:
+  drupal_private:
+  drupal_sites:
+  drupal:
+  db_data:
