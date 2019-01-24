@@ -10,7 +10,6 @@ services:
       - drupal_sites:/var/www/html/sites
       - drupal:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - ./settings.local.php:/var/www/html/sites/default/settings.local.php
     restart: always
 
   postgres:
