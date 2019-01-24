@@ -5,7 +5,7 @@ RUN apt-get update -y \
     && apt-get install -y --no-install-recommends git unzip
 
 RUN composer require \
-    'drupal/bootstrap' \
+    'drupal/adminimal_theme' \
     'drupal/diff' \
     'drupal/entity_usage' \
     'drupal/geofield_map' \
