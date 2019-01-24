@@ -7,6 +7,7 @@ services:
       - 8888:80
     volumes:
       - drupal_private:/var/www/private
+      - ./sync:/var/www/sync
       - drupal_sites:/var/www/html/sites
       - drupal:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
@@ -25,6 +26,7 @@ services:
     working_dir: "/var/www/html"
     volumes:
       - drupal_private:/var/www/private
+      - ./sync:/var/www/sync
       - drupal_sites:/var/www/html/sites
       - drupal:/var/www/html
 

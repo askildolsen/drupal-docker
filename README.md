@@ -3,7 +3,8 @@
 ## Installation
 
 docker-compose up -d --build\
-docker-compose run drush si standard --db-url=pgsql://postgres:example@postgres/postgres
+docker-compose run --rm drush si standard --db-url=pgsql://postgres:example@postgres/postgres\
+docker-compose run --rm drush config-import --partial
 
 ## Upgrade
 
