@@ -11,6 +11,7 @@ RUN composer require \
     'drupal/geofield_map' \
     'drupal/leaflet' \
     'drupal/paragraphs' \
+    'drupal/restui' \
     'drupal/webform'
 
 WORKDIR /var/www/html/sites/default
