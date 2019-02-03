@@ -12,7 +12,8 @@ RUN composer require \
     'drupal/leaflet' \
     'drupal/paragraphs' \
     'drupal/restui' \
-    'drupal/webform'
+    'drupal/webform' \
+    'drupal/webform_rest'
 
 WORKDIR /var/www/html/sites/default
 
