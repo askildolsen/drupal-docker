@@ -11,6 +11,7 @@ services:
       - drupal_sites:/var/www/html/sites
       - drupal:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./leaflet_norgeskart:/var/www/html/modules/custom/leaflet_norgeskart
     restart: always
 
   postgres:

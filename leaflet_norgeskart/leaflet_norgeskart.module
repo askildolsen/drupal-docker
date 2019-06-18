@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * Implements hook_leaflet_map_info().
+ */
+function leaflet_norgeskart_leaflet_map_info() {
+  return [
+    'Norgeskart 1' =>
+      [
+        'label' => 'Norgeskart: Enkelt kart',
+        'description' => t('Leaflet default map.'),
+        'settings' => [
+          'dragging' => TRUE,
+          'touchZoom' => TRUE,
+          'scrollWheelZoom' => TRUE,
+          'doubleClickZoom' => TRUE,
+          'zoomControl' => TRUE,
+          'attributionControl' => TRUE,
+          'trackResize' => TRUE,
+          'fadeAnimation' => TRUE,
+          'zoomAnimation' => TRUE,
+          'closePopupOnClick' => TRUE,
+        ],
+        'layers' => [
+          'earth' => [
+            'urlTemplate' => '//opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=egk&zoom={z}&x={x}&y={y}',
+            'options' => [
+              'attribution' => 'Kartverket',
+            ],
+          ],
+        ],
+      ],
+    'Norgeskart 2' =>
+      [
+        'label' => 'Norgeskart: Eiendomskart',
+        'description' => t('Leaflet default map.'),
+        'settings' => [
+          'dragging' => TRUE,
+          'touchZoom' => TRUE,
+          'scrollWheelZoom' => TRUE,
+          'doubleClickZoom' => TRUE,
+          'zoomControl' => TRUE,
+          'attributionControl' => TRUE,
+          'trackResize' => TRUE,
+          'fadeAnimation' => TRUE,
+          'zoomAnimation' => TRUE,
+          'closePopupOnClick' => TRUE,
+        ],
+        'layers' => [
+          'earth' => [
+            'urlTemplate' => '//opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=matrikkel_bakgrunn&zoom={z}&x={x}&y={y}',
+            'options' => [
+              'attribution' => 'Kartverket',
+            ],
+          ],
+        ],
+      ],
+    'Norgeskart 3' =>
+      [
+        'label' => 'Norgeskart: Topografisk kart',
+        'description' => t('Leaflet default map.'),
+        'settings' => [
+          'dragging' => TRUE,
+          'touchZoom' => TRUE,
+          'scrollWheelZoom' => TRUE,
+          'doubleClickZoom' => TRUE,
+          'zoomControl' => TRUE,
+          'attributionControl' => TRUE,
+          'trackResize' => TRUE,
+          'fadeAnimation' => TRUE,
+          'zoomAnimation' => TRUE,
+          'closePopupOnClick' => TRUE,
+        ],
+        'layers' => [
+          'earth' => [
+            'urlTemplate' => '//opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo4&zoom={z}&x={x}&y={y}',
+            'options' => [
+              'attribution' => '<a href="http://www.kartverket.no/">Kartverket</a>',
+            ],
+          ],
+        ],
+      ],
+  ];
+}

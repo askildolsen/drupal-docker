@@ -1,0 +1,9 @@
+name: Leaflet Norgeskart Module
+description: Legger Norgeskart som lag til Leaflet
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:leaflet
