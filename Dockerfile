@@ -13,7 +13,8 @@ RUN composer require \
     'drupal/paragraphs' \
     'drupal/restui' \
     'drupal/webform' \
-    'drupal/webform_rest'
+    'drupal/webform_rest' \
+    'drush/drush'
 
 WORKDIR /var/www/html/sites/default
 
@@ -27,3 +28,5 @@ RUN cp default.settings.php settings.php && \
     chmod 777 /var/www/private && \
     mkdir /var/www/sync && \
     chmod 777 /var/www/sync
+
+WORKDIR /var/www/html

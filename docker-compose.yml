@@ -21,15 +21,6 @@ services:
       - db_data:/var/lib/postgresql/data
     restart: always
 
-  drush:
-    image: drush/drush:8-alpine
-    working_dir: "/var/www/html"
-    volumes:
-      - drupal_private:/var/www/private
-      - ./sync:/var/www/sync
-      - drupal_sites:/var/www/html/sites
-      - drupal:/var/www/html
-
 volumes:
   drupal_private:
   drupal_sites:
