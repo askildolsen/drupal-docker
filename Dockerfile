@@ -4,6 +4,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends git unzip
 
+RUN composer require zaporylie/composer-drupal-optimizations:^1.0
+
 RUN composer require \
     'drupal/adminimal_theme' \
     'drupal/diff' \
